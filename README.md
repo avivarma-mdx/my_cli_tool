@@ -21,6 +21,8 @@ Using the command `pyinstaller --onefile -n mycli my_cli_tool/cli.py` you get th
 
 Run the following command to get started: `pyinstaller mycli.spec`
 
+You will find a new directory called `dist/mycli` within you will find the binary `my-cli`
+
 ## What is the mycli.spec File?
 The mycli.spec file is a specification file that PyInstaller uses to define how your Python application should be packaged into an executable. This file includes detailed instructions on what to include in the final package, such as scripts, modules, data files, and any additional settings.
 
@@ -54,9 +56,9 @@ Collecting Everything: Finally, the COLLECT step gathers the executable, any add
 # Test the Program
 
 ``` bash
-./dist/mycli --help
-./dist/mycli --read example.txt
-./dist/mycli --write-json example.json
-./dist/mycli --config new_value
-./dist/mycli --change-dir /path/to/directory
+./mycli --help
+./mycli --read example.txt
+./mycli --write-json example.json
+./mycli --config new_value
+./mycli --change-dir /path/to/directory
 ```
